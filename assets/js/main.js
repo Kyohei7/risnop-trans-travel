@@ -74,21 +74,27 @@
   let scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
+      if (scrollTop) {
+          window.scrollY > 30 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      }
   }
+
   scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+      e.preventDefault(); // Mencegah perilaku default tautan
+
+      // Cari elemen dengan id="call-to-action"
+      let callToActionSection = document.getElementById('call-to-action');
+
+      if (callToActionSection) {
+          // Gulir ke elemen tersebut
+          callToActionSection.scrollIntoView({
+              behavior: 'smooth'
+          });
+      }
   });
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
-
   /**
    * Animation on scroll function and init
    */
