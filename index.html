@@ -4,17 +4,33 @@
 
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-TR8J6TJ6');</script>
-  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16892463477"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'AW-16892463477');
+  </script>
+
+  <!-- Event snippet for KLIK TOMBOL WA conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16892463477/ULi4CJjzpLQaEPWS-vY-',
+        'event_callback': callback
+    });
+    return false;
+  }
+  </script>
+  
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Mudik Lebaran 2025 Door-to-Door: Jabodetabek - Jawa Tengah & Jawa Timur</title>
@@ -56,11 +72,6 @@
 </head>
 
 <body class="index-page">
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TR8J6TJ6" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
@@ -213,8 +224,8 @@
                 Tim kami siap membantu menjawab semua pertanyaan Anda dan memberikan informasi lengkap mengenai jadwal,
                 harga, rute,
                 dan fasilitas yang tersedia. Hubungi kami sekarang untuk mendapatkan penawaran terbaik!</p>
-              <a class="cta-btn" href="https://wa.link/xdpx3n">
-                <i class="bi bi-whatsapp"></i> Hubungi Kami
+                <a href="https://wa.link/xdpx3n" onclick="return gtag_report_conversion('https://wa.link/xdpx3n');">
+                  <i class="bi bi-whatsapp"></i> Hubungi Kami
               </a>
             </div>
           </div>
