@@ -16,21 +16,21 @@
 
   <!-- Event snippet for KLIK TOMBOL WA conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
         'send_to': 'AW-16892463477/ULi4CJjzpLQaEPWS-vY-',
         'event_callback': callback
-    });
-    return false;
-  }
+      });
+      return false;
+    }
   </script>
-  
+
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Mudik Lebaran 2025 Door-to-Door: Jabodetabek - Jawa Tengah & Jawa Timur</title>
@@ -224,8 +224,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 Tim kami siap membantu menjawab semua pertanyaan Anda dan memberikan informasi lengkap mengenai jadwal,
                 harga, rute,
                 dan fasilitas yang tersedia. Hubungi kami sekarang untuk mendapatkan penawaran terbaik!</p>
-                <a href="https://wa.link/xdpx3n" onclick="return gtag_report_conversion('https://wa.link/xdpx3n');">
-                  <i class="bi bi-whatsapp"></i> Hubungi Kami
+              <a class="cta-btn" href="https://wa.link/xdpx3n"
+                onclick="return gtag_report_conversion('https://wa.link/xdpx3n');">
+                <i class="bi bi-whatsapp"></i> Hubungi Kami
               </a>
             </div>
           </div>
